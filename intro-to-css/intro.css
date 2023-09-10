@@ -1,0 +1,151 @@
+/* At the most basic level, the css syntax is made of various rules
+There is a selector, a semi-colon separated list of declarations, and each declaration has a property:value pair */
+/* 
+selector {
+    property:value;
+} 
+*/
+
+/* The universal Selector: */
+* {
+    color:purple;
+}
+/* In this example, every element would have the color:purple style applied to it */
+
+/* Type Selectors: */
+/* A type selector will select all elements of the given element type, and the syntax is just the name of the element. */
+div {
+    color: white;
+}
+
+/* Class selectors */
+/* Class selectors select all elements with the given class, which is just an attribute you place  */
+.alert-text{
+    color:red;
+}
+
+/* ID Selectors */
+/* Similar to class selectors. Selects an element with the given id, which is another attribute you place on an html element.
+The major difference between this and classes is that an element can only have one ID (cannot be repeated on a single page) */
+/* Ids will use a hastag before them instead of a period */
+#title {
+    background-color: red;
+}
+
+/* The grouping selector: */
+/* If two groups of element share some of their style declarations, they can be grouped together: */
+.read, .unread {
+    color: white;
+    background-color: black;
+}
+.read{
+    color-scheme: yellow;
+}
+.unread{
+    color-scheme: blue;
+}
+
+/* Chaining selectors: */
+/* Another way to use selectors is to chain them as a list without separation. */
+/* Say you had this code here:
+<div>
+<div class="subsection header">Latest Posts</div>
+<p class="subsection preview">This is where a preview for a post might go.</p>
+</div> 
+Both of them have "subsection" elements with some unique styles, but what if we only want a separate rule
+to the element that also has header as a second class? This can be done with chaining the class selectors together
+in CSS like so: */
+.subsection.header{
+    color: red;
+}
+
+/* This can also be used to chain a class and an ID as shown below: */
+.subsection#preview{
+    color: blue;
+}
+
+/* Generally, you can chain anything except for two type selectors, since an element can't b e two different types at once. */
+
+/* Descendant Combinator */
+/* Allow you to combine multiple selectors differently than grouping or chaining. It shows a relationship between the selectors. */
+/* the descendent combinator is represented in CSS by a single space between selectors. It will cause elements that match the last selector
+to be selected if they also have an ancestor that matches the previous selector. */
+.ancestor .contents {
+    background-color: blue;
+}
+/* So something like .ancestor .child would select an element with the class child if it has an ancestor with the class ancestor. 
+Another way to think of it is child will only be selected if it is nested inside of ancestor, no matter how deep. Take a quick look 
+at the example below and see if you can tell which elements would be selected based on the CSS rule provided: */
+
+/* Properties to get started with: */
+/* Color and background color: */
+color: yellow;
+background-color: red;
+color: transparent;
+
+/* Typography basics and text-align */
+/* font-family can be a single-value or a comma-separated list of values that determine what font an element uses */
+    /* Each falls into one of two categories, a font-family like "times new roman", or a "generic family name" like sans-serif */
+    /* Common practice is to list most-wanted first, then provide alternatives: */
+    family: "Times New Roman", sans-serif;
+
+/* font-size sets the size of the font. This should contain no white-space, i.e.: */
+    font-size:22px
+
+/* font-weight affects the boldness of the text. Can be a keyword, like bold, or a number from 1 to 1000. */
+    font-weight: bold
+    font-weight: 800
+
+/* text-align will align text horizontally within an element, and common keywords can be used like this: */
+    text-align: center
+
+/*  Image height and width. You could auto-adjust an image's size by setting one attribute to auto, then changing the other: */
+img {
+    height: auto;
+    width: 500px;
+}
+
+
+/* Now that we have learned some basic syntax, how do we actually add all the CSS to html? There are three methods to do so: */
+    /* External CSS */
+        /* the most common method you will come across, involves creating a separate file for the css and linking it inside of an html's
+        opening and closing <head> tags with a self-closing link> element */
+            /* 
+            <!-- index.html -->
+
+            <head>
+            <link rel="stylesheet" href="styles.css" />
+            </head> 
+            */
+        /*  href is the location of the css file. The rel attribute is required, specifying the relationshup between the HTML file and linked file */
+
+    /* Internal CSS */
+        /* Involves adding the css within the html file itself instead of creating a separate file. Here, you place all rules inside of a pair of 
+        opening and closing <style> tags of your html file. Since styles are placed directly inside of the head tags, we no longer need a link element */
+                /* 
+                <head>
+                <style>
+                div {
+                    color: white;
+                    background-color: black;
+                }
+            
+                p {
+                    color: red;
+                }
+                </style>
+            </head>
+            <body>
+                ...
+            </body> 
+            */
+
+    /* Inline CSS: */
+        /* Makes it possible to add styles directly to html elements, though this is not as recommended! */
+            /* 
+            <body>
+            <div style="color: white; background-color: black;">...</div>
+            </body> 
+            */
+        /* Most notable is that we don't actually use selectors here since the styles are added to div */
+        /* This method would primarily be for adding a unique style to a SINGLE element, but generally is pretty messy and should be avoided. */
