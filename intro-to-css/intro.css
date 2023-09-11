@@ -17,12 +17,16 @@ selector {
 div {
     color: white;
 }
+/* This one automatically selects the type in the html file */
 
 /* Class selectors */
 /* Class selectors select all elements with the given class, which is just an attribute you place  */
 .alert-text{
     color:red;
 }
+/* This is how the html application would look like: */
+/* <p class = "alert-text">Number 1 - I'm a class!</p> */
+
 
 /* ID Selectors */
 /* Similar to class selectors. Selects an element with the given id, which is another attribute you place on an html element.
@@ -67,8 +71,10 @@ in CSS like so: */
 /* Generally, you can chain anything except for two type selectors, since an element can't b e two different types at once. */
 
 /* Descendant Combinator */
-/* Allow you to combine multiple selectors differently than grouping or chaining. It shows a relationship between the selectors. */
-/* the descendent combinator is represented in CSS by a single space between selectors. It will cause elements that match the last selector
+/* Allow you to combine multiple selectors differently than grouping or chaining. 
+It shows a relationship between the selectors. */
+/* the descendent combinator is represented in CSS by a single space between 
+selectors. It will cause elements that match the last selector
 to be selected if they also have an ancestor that matches the previous selector. */
 .ancestor .contents {
     background-color: blue;
