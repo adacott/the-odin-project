@@ -155,3 +155,60 @@ img {
             */
         /* Most notable is that we don't actually use selectors here since the styles are added to div */
         /* This method would primarily be for adding a unique style to a SINGLE element, but generally is pretty messy and should be avoided. */
+
+
+/* THE CASCADE: */
+/* Specificity
+    A CSS declaration will use more specific calls first, then move to less specific.
+    INLINE styles have the highest specificity compared to selectors, while each type of selector has its
+        own specificty level that contributes to how specific a declaration is. Other selectors can contribute too,
+        but of the ones we have gone over: 
+            1. ID selectors (like #title, most specific selector)
+            2. class selectors (like .article)
+            3. type selectors (like div)  
+    Specificity will only take a role wHen an element has multiple, conflicting declarations regarding it.
+        When no declaration has a selector with a higher specificity, the one with the larger amounts of single
+        selectors will take precedence. 
+        /* rule 1 */
+        /* 
+        .subsection {
+            color: blue;
+        }
+        
+        /* rule 2 */
+        /* 
+        .main .list {
+            color: red;
+        } 
+        */
+    /* In this example, rule 2 will take precedence because it has the most number of single selectors since 
+    they both share hte same specificity. */
+        /* rule 1 */
+        /* 
+        #subsection {
+            background-color: yellow;
+            color: blue;
+        } 
+        */
+        
+        /* rule 2 */
+        /* 
+        .main #subsection {
+        color: red;
+        } 
+        */
+    /* Note that in the above example, rule 2 will take preference because both have an id, but rule 2
+    has an additional class selector and so has higher specificity. However, background-color yellow from rule
+    1 will still apply since there is no conflicting declaration in rule 2 */
+
+/* Inheritance */
+    /* Inheritance refers to a certain css property that, when applied to an element, is inherited
+    by that element's descendents, even if a rule isn't explicitly stated for those.
+        Typography based properties such as color, font-size, and font-family are usually inherited
+        while most other properties are not.
+    The exception to this rule is when directly targeting an element, as this will always beat inheritance. */
+
+/* Rule Order */
+    /* The final factor, the end of the line, the tie-breaker. After very other factor has been accounted for,
+    there may still be conflicting rules targeting an element. Now what?
+        In this case its actually very simple -- the last defined rule will always be the one that takes precedence. */
