@@ -212,3 +212,60 @@ img {
     /* The final factor, the end of the line, the tie-breaker. After very other factor has been accounted for,
     there may still be conflicting rules targeting an element. Now what?
         In this case its actually very simple -- the last defined rule will always be the one that takes precedence. */
+
+
+/* ⁡⁣⁣⁢𝗧𝗛𝗘 𝗕𝗢𝗫 𝗠𝗢𝗗𝗘𝗟⁡ */
+/* Placing elements on a webpage accurately is a very important skill, and one that some people miss */
+    /* The box model says that every single thing on a webpage, no matter what, is a rectangular box.
+        These boxes can have other boxes inside of them, be next to each other, etc.,
+        even if there are circles in a webpage, they behave as squares, not circles
+    IMPORTANTLY, the best way to manipulate the size and location of these boxes is through:
+        ⁡⁢⁣⁣padding⁡
+            increases the space between the border of a box and the context of the box
+            𝗽𝗮𝗱𝗱𝗶𝗻𝗴: 𝟭𝟬𝗽𝘅;
+            Padding can be specific sides controlled with: ⁡⁢⁢⁣padding-top, padding-right, padding-bottom, padding-left⁡
+        ⁡⁢⁣⁣margin⁡
+            increases the space between the borders of a box and the borders of adjacent boxes
+            𝗺𝗮𝗿𝗴𝗶𝗻: 𝟲𝟬𝗽𝘅;
+            If using a negative value for one margin, it will subtract that value from the positive value it 
+            is adjacent to
+        ⁡⁢⁣⁣border⁡
+            adds space (even if only a pixel or two) between the margin and the padding
+            𝗯𝗼𝗿𝗱𝗲𝗿: 𝟯𝟬𝗽𝘅 𝘀𝗼𝗹𝗶𝗱 𝗯𝗹𝗮𝗰𝗸;
+            Can use ⁡⁢⁢⁣border-top, border-right, border-bottom, border-left⁡ to set properties individually.
+            ⁡⁢⁢⁣border-width, border-style, and border-color⁡ can also be used in the same way to set attributes
+            of the border. If you want to be more specific, you can use something like ⁡⁢⁢⁣border-top-width ⁡for any of the
+            directions to create specific stylings
+    Its important to note, that when coding with these elements, border and padding will both add to the height
+    and width of the element being added.
+        If you set an item to be 100x100 px and dont want it to increase when adding a border, you can use the command
+            ⁡⁢⁣⁣𝗯𝗼𝘅-𝘀𝗶𝘇𝗶𝗻𝗴: 𝗯𝗼𝗿𝗱𝗲𝗿-𝗯𝗼𝘅;⁡
+                This command will force the border to subtract the size of the border from the context, so that even if
+                you were to added a 20px border to a 100x100 element, the total size including border and element will
+                remain 100x100. WITHOUT this command, the size of the element with A 20 px border and padding 10 would
+                be: ⁡⁢⁢⁣element + (padding*2) + (border*2) = 100x100 + 20*2 + 10*2 = 160x160 px element⁡
+    Boxes can be block boxes or inline boxes. The choice affects how htye interact with one another.
+        ⁡⁢⁣⁣display: block⁡
+            for example, this would set the display type of the box to block.
+            This causes the box to break onto a new line, it respects width and height, and padding, margin,
+            and border will cause other elements to be pushed away from the box.
+            If width is not specified, the box will extend in the inline direction to fill the entire space
+            available to its container. In most cases, the box becomes as wide as the container, filling 100% of space.
+        ⁡⁢⁣⁣display: inline⁡
+            This box will not break into a new line. Width and height properties will not apply. Top and bottom padding,
+            margins, and borders will apply but will not cause other inline boxes to move away from the box. Left and right
+            padding, margins, and borders will apply and cause other linine boxes to move away from the box. 
+        ⁡⁢⁣⁣display: flex⁡
+            Some boxes have the inner display type, which dictates how elements inside that box are laid out. 
+            In the example above, setting display flex will still use the outer display type block, but changes the inner
+            display type to flex. Any direct children of this become flex boxes and will behave accordingly.
+        ⁡⁢⁣⁣display: inline-block⁡ 
+            Is an in-between for block and inline styles. It behaves like inline elements, but has block-style padding and margins
+            This is useful to know about, but chances are you will be reaching for flexbox as an option instead of this. 
+            
+    Divs and Spans:
+        These give no inherent meaning to their content. They are generic boxes that can contain anything. Think of them more as containers
+        for other elements you want to use. Uses include as a "hook" for styling with CSS so they can be preferentially targeted. Another
+        use-case for these are to group related elements under one parent element to correctly position them on the page. Divs and spans allow
+        us to do this exact thing.*/
+        
