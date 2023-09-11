@@ -267,5 +267,11 @@ img {
         These give no inherent meaning to their content. They are generic boxes that can contain anything. Think of them more as containers
         for other elements you want to use. Uses include as a "hook" for styling with CSS so they can be preferentially targeted. Another
         use-case for these are to group related elements under one parent element to correctly position them on the page. Divs and spans allow
-        us to do this exact thing.*/
+        us to do this exact thing.
+            Divs:
+                Block-level element by default, it is commonly used as a container element to group other elements together. Divs allow us to
+                divide the page into different blocks and apply styling to those blocks.
+            Spans:
+                Span is an inline-level element by default. It cna be used to group text content and inline html elements for styling and should 
+                only be used when no other semantic HTML element is appropriate.*/
         
