@@ -275,3 +275,106 @@ img {
                 Span is an inline-level element by default. It cna be used to group text content and inline html elements for styling and should 
                 only be used when no other semantic HTML element is appropriate.*/
         
+/* 
+⁡⁢⁣⁣Flexbox:⁡
+    Is a relatively new way of manipulating elements in CSS -- its debut was considered revolutionary it was so impactful.
+    Flexbox is a newer tool, and so is often taught at the end of curriculums, but its has become the default way to
+    position elements for many. ⁡⁢⁢⁢𝗜𝘁 𝘄𝗶𝗹𝗹 𝗹𝗶𝗸𝗲𝗹𝘆 𝗯𝗲 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗺𝗼𝘀𝘁 𝘂𝘀𝗲𝗱 𝘁𝗼𝗼𝗹𝘀 𝗶𝗻 𝘆𝗼𝘂𝗿 𝘁𝗼𝗼𝗹𝗯𝗼⁡⁢⁢⁢𝘅.⁡ 
+    ⁡
+    Flexbox isn't necessarily more difficult, but it does follow a different process than the other things we have learned. Therefore,
+    it is highly recommended to use the dev-tools to figure out whats going on, and you should play with the code in the lesson.
+
+    Flexbox is ultimately a way to arrange items in to rows or columns. These items flex, (shrink or grow) based on simple rules that
+    you can define beforehand.
+
+    HTML Example code:
+        <div class="flex-container">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+        </div>
+
+    CSS Example code:
+        .flex-container {
+            display: flex; 
+        }
+
+        .flex-container div {
+            background: peachpuff;
+            border: 4px solid brown;
+            height: 100px;
+            flex: 1; 
+        }
+
+    As can be seen, flexbox is a group of properties that are used to put things where htey need to go.
+        Some of these properties belong on ⁡⁣⁣⁢⁡⁢⁣⁣𝗳𝗹𝗲𝘅 𝗰𝗼𝗻𝘁𝗮𝗶𝗻𝗲𝗿𝘀⁡⁡ and some on ⁡⁣⁣⁢⁡⁢⁣⁣𝗳𝗹𝗲𝘅 𝗶𝘁𝗲𝗺𝘀⁡⁡. This is an 𝘪𝘮𝘱𝘰𝘳𝘵𝘢𝘯𝘵 concept.
+    
+        A flex container is any element that has⁡⁣⁣⁢ ⁡⁢⁣⁣display: flex⁡⁡ inside it. 
+        A flex item is any element that lives directly inside of a flex container.
+            Somewhat confusing, any element can be a flex container AND a flex item. I.e. - you can also put
+            display: flex on a flex item and then use flexbox to arrange its children!
+
+    Creating and nesting multiple flex containers and items inside of others is the primary way that you will build complex layouts.
+    The following image (flexbox.png) was achieved using ONLY flexbox to arrange, size, and place the various elements. Flexbox is VERY powerful.
+        
+    ⁡⁢⁣⁣Useful command when using display:flex;⁡
+        ⁡⁢⁣⁣justify-content: <option>; always works on your main axis -- if you make your main axis column, this affects up and down⁡
+            center, flex-start, flex-end, space-around, space-between, space-evenly
+        ⁡⁢⁣⁣align-items: <option>;⁡
+            center, flex-start (top), flex-end (bottom), stretch, baseline
+        ⁡⁢⁣⁣flex-wrap: <option>⁡
+            nowrap, wrap
+        ⁡⁢⁣⁣flex-direction: <option>⁡
+            row, column, row-reverse, column-reverse
+            The default container items are drawn in rows, horizontally, before they run out of room and pop down
+            to the next column when they run out of space. Column flex-direction will instead fill out the up and down space
+            first then do the row.
+        ⁡⁢⁣⁣order: #⁡
+            -1, 0, 1, 2, ..., n
+            ⁡⁢⁢⁣Used on individual flex items and not flex containers!⁡
+            Default value is zero, increasing or decreasing the value moves the item to the right of left, respectively.
+            -1 would be used to swap the last item with the first item
+        ⁡⁢⁣⁣align-self: <option>⁡
+            center, flex-start (top), flex-end (bottom), stretch, baseline
+            Similar to order, except for horizontal positioning, is used to override the align-items property from parent
+        ⁡⁢⁣⁣flex: #⁡
+            -1, 0, 1, 2, ..., n
+            ⁡⁢⁢⁣Is actually short-hand for flex-grow, flex-shrink, and flex-basis⁡
+            The flex property defines the width of individual items in a flex container, allowing them to have flexible widths.
+            For example, and item with flex: 2 will grow twice as fast as values with the default value of 1
+        ⁡⁢⁣⁣flex: initial ⁡⁢⁣⁣OR auto to use the initial weidth, height but still be flexible⁡⁡
+            Forces the box back to its default behavior, where it will use the item's explicit width and height properties.
+            This lets you combine static and flexible boxes.
+        ⁡⁢⁣⁣margin-left: auto⁡
+            Auto margins can still be used to replace commands that require an extra div, such as space-between that we used earlier.
+            It gives the exact same result, and this may help because sometimes its nicer to keep your html flatter.
+        ⁡⁢⁣⁣flex-grow: #⁡
+            Expects a single number as its value, and that number is used as the flex item's growth factor.
+        ⁡⁢⁣⁣flex-shrink: #⁡
+            Similar to flex-grow, but defines the shrink-factor of a flex item. Flex shrink is only applied if the size of all flex items is larger than their parent container.
+            For example, if our 3 divs from above had a width declaration like: width:100px, and .flex-container was smaller than 300px, our divs would have to shrink to fit it.
+            A flex-shrink value of zero means that your flex item will not shrink if your browser was resized for example.
+        ⁡⁢⁣⁣flex-basis: 0-100%, or auto,⁡⁢⁣⁣ or px value⁡
+            Tells whether or not to use the width that has been declared, or use automatic adjustments. Similar to calling flex:initial, can also use flex:auto
+        ⁡⁢⁣⁣gap: 1rem⁡
+            1rem is an example value that is a relatively new command to flex box. This just adds some spacing between elements to make it look a little neater.
+        
+
+> * -- something like .columns > * {} means to select the direct children of columns
+
+can use something like:
+    @media (min-width: 750px) {
+        .columns {
+            flex-direction: row
+        }
+    }
+    What this does it allows you to dynamically change the formatting of .columns when the width of the page is below 750 px. You can use this to create clean layouts that use columns
+    sometimes and rows others. You can use "@media" to do lots of different stuff like this I think?
+
+Can also use:
+    min-width:
+    mid-height:
+    These can be used to prevent elements from going out of bounds
+
+*/
