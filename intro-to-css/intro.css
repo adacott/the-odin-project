@@ -377,4 +377,15 @@ Can also use:
     mid-height:
     These can be used to prevent elements from going out of bounds
 
+IMPORTANT TO KNOW:
+    flexbox works by grouping boxes in other boxes. If you have a header element with 4 separate elements containing links,
+    and you dont group them, then space-around or space-between will space all 4 elements appropriately. If, however, you group
+    the first two links and the last two links, then it will group the groups, and NOT individual links
+
+    ORDER AND BOUNDING BOXES ARE VERY IMPORTANT
+
 */
+
+
+
+
