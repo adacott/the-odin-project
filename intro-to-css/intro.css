@@ -343,7 +343,7 @@ img {
             ⁡⁢⁢⁣Is actually short-hand for flex-grow, flex-shrink, and flex-basis⁡
             The flex property defines the width of individual items in a flex container, allowing them to have flexible widths.
             For example, and item with flex: 2 will grow twice as fast as values with the default value of 1
-        ⁡⁢⁣⁣flex: initial ⁡⁢⁣⁣OR auto to use the initial weidth, height but still be flexible⁡⁡
+        ⁡⁢⁣⁣flex: initial ⁡⁢⁣⁣OR auto to use the initial width, height but still be flexible⁡⁡
             Forces the box back to its default behavior, where it will use the item's explicit width and height properties.
             This lets you combine static and flexible boxes.
         ⁡⁢⁣⁣margin-left: auto⁡
