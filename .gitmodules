@@ -3,3 +3,4 @@
 	url = https://github.com/adacott/odin-recipes
 [submodule "odin-landing-page"]
 	path = odin-landing-page
+	url = https://github.com/adacott/odin-landing-page
