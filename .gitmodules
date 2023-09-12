@@ -1,3 +1,5 @@
 [submodule "odin-recipes"]
 	path = odin-recipes
 	url = https://github.com/adacott/odin-recipes
+[submodule "odin-landing-page"]
+	path = odin-landing-page
