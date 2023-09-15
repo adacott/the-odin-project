@@ -4,3 +4,6 @@
 [submodule "odin-landing-page"]
 	path = odin-landing-page
 	url = https://github.com/adacott/odin-landing-page
+[submodule "odin-rock-paper-scissors"]
+	path = odin-rock-paper-scissors
+	url = https://github.com/adacott/odin-rock-paper-scissors

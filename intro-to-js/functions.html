@@ -30,6 +30,29 @@
                 return string[string.length-1];
             }
             console.log(`The result of lastLetter is: ${lastLetter("My cat")} from string "My cat"`);
+
+            function fizzBuzz(){
+                
+                let arry = [];
+                num = parseInt(prompt("Please enter a number to fizzBuzz Up to: "));
+
+                for(let i = 0; i <= num; i++){
+                    if(i % 5 == 0 && i % 3 == 0){
+                        arry[i] = i + ": fizzBuzz";
+                    }
+                    else if(i % 5 == 0){
+                        arry[i] = i + ": Buzz";
+                    }
+                    else if(i % 3 == 0){
+                        arry[i] = i + ": fizz";
+                    }
+                    else{
+                        arry[i] = i;
+                    }
+                }
+                return console.log(arry);
+            }
+            fizzBuzz();
         </script>
     </body>
 </html>
