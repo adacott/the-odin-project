@@ -1,0 +1,46 @@
+⁡⁢⁣⁣𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧⁡
+
+    Javscript can be added to an html file directly by doing:
+
+    <script>
+    // Your javascript goes here
+    console.log("Hello World!")
+    </script>
+
+    Now, to view your code, you would launch the html file in the browser, open the dev tools, then go to the console to see the message.
+    The other way to insert javascript for more complex scripts is to use an external script. Here, just like you link html, you would
+    do the same with js by typing:
+
+        <script src="javascript.js"></script>
+
+    And then populate the external script file with the code you want to run
+
+    ⁡⁢⁣⁣Variables
+        ⁡⁢⁢⁣Declare variables in javascript with:
+            var, let and const can be used to declare variables⁡⁡
+            ⁡⁢⁣⁣let:⁡
+                let message = "Hello!";      let user = "John", age = 25, message = "Hello!";
+                let user = "John",
+                    age 25, message = "Hello";
+            ⁡⁢⁣⁣var:⁡
+                var message = "Hello";
+            Case matters: for example, apple and APPLE are two different variables
+            Variables can be declared with num = 5 for example, as long as you dont put "use strict" in your script to maintain compatibility
+                with older scripts
+            ⁡⁢⁣⁣cont:⁡
+                To create a constant unchanging variable, use const instead of let:
+                    const myBirthday = "18.04.1982";
+                It is good practice to use constants as aliases for difficult to remember values that are known prior to execution, like color hexes
+                    These constants are always named using capital letters and underscores like so: const COLOR_RED = "#F00";
+    Alert() can be used to print a variable or message 
+
+    Quote types and Strings:
+    "", '', `` can all be used to declare strings. Double and single qutoes are functionally the same thing, however backticks (``) allow you to embed variables
+    and expression into a string by wrapping them in ${} for exampe:
+        let name = "John";
+        alert(`Hello, ${name}!`);
+
+    https://www.w3schools.com/js/js_string_methods.asp - Link that has a lot of commonly used js string methods such as slice, length, etc
+    https://www.w3schools.com/jsref/jsref_obj_string.asp - Same as above, with string methods, but also string HTML wrapper methods as well
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String - fully exhaustive list of methods usable on strings
+
