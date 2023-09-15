@@ -43,6 +43,7 @@
     https://www.w3schools.com/js/js_string_methods.asp - Link that has a lot of commonly used js string methods such as slice, length, etc
     https://www.w3schools.com/jsref/jsref_obj_string.asp - Same as above, with string methods, but also string HTML wrapper methods as well
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String - fully exhaustive list of methods usable on strings
+    https://javascript.info/ifelse - Useful stuff on conditional branching that follows the format: (condition) ? (do this if true) : (or else do this)
 
    ⁡⁢⁣⁣ Functions:⁡
         An example of a function in js is this:
