@@ -140,4 +140,35 @@
     ⁡⁢⁣⁣Java call stacks:⁡
         Works on the LIFO principle, or last-in-first-out. https://www.javascripttutorial.net/javascript-call-stack/ Good tutorial on call-stack order, but not worth typing out notes for.
 
+    Java loops and arrays:
+        let fruits = [];
+        fruits.forEach(myFunction);
+
+        The forEach method is a powerful and easy way to loop through a function, doing something to
+            each element.
+        .push() - adds an element to an array
+        .length() - returns size of array
+        .sort() - sorts the elements in an aray 
+        .toString()
+        .pop()
+        .shift()
+        .unshift()
+        .join()
+        .delete()
+        .concat()
+        .flat()
+        .splice()
+        .slice()
+        https://www.w3schools.com/js/js_array_methods.asp -- good website with details on these.
+
+        In loops, keep in mind if you have nested loops, and you use the break command, you will only
+        break out of the inner loop unless you label the outer loop like this:
+            outer: for(){
+                for(){
+                    break outer;
+                }
+            }
+        You can then call the label that you attached to the outer loop when using break to break out
+        to that specific level
+
 

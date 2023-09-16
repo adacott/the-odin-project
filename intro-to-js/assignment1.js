@@ -12,3 +12,18 @@ const max = 57;
 actual = max - 13;
 percentage = actual/max;
 console.log(percentage);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits);
+fruits.splice(2, 2, "Lemon", "Kiwi");
+console.log(fruits);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits);
+fruits.splice(0, 1);
+console.log(fruits);
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+console.log(fruits);
+const citrus = fruits.slice(1);
+console.log(citrus);
