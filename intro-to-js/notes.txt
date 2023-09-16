@@ -171,4 +171,130 @@
         You can then call the label that you attached to the outer loop when using break to break out
         to that specific level
 
+    ⁡⁢⁣⁣Working in the DOM tree, and selecting nodes:⁡
+        const container = document.querySelector('#container');
+        // selects the #container div (don't worry about the syntax, we'll get there)
+
+        console.dir(container.firstElementChild);                      
+        // selects the first child of #container => .display
+
+        const controls = document.querySelector('.controls');   
+        // selects the .controls div
+
+        console.dir(controls.previousElementSibling);                  
+        // selects the prior sibling => .display
+
+        Generally, ⁡⁢⁣⁣selection⁡ takes on this form:
+            element.querySelector(selector) -- returns a reference to the first match of selector
+            element.querySelectorAll(selectors) -- returns a "nodelist" containing refernces to ALL matches
+
+            Note that even though the result looks like an array it is not. It is a nodelist. To get
+                around these limitations, it can be converted to an arary with "Array.from()".
+
+        document.createElement(tagName, [options]) - creates a new element of tag type tagName
+
+      ⁡⁢⁣⁣  Appending Elements:⁡
+            parentNode.appendChild(childNode) - appends childNode as the last child of parentNode
+            parentNode.insertBefore(newNode, referenceNode) - inserts newNode into parentNode before 
+                referenceNode
+
+        ⁡⁢⁣⁣Removing elements:⁡
+            parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a 
+                reference to child
+
+        https://domenlightenment.com/#6.2 - massive resources that has a bunch of ways to adjust/alter
+            CSS properties using javascript
+
+    ⁡⁢⁣⁣Javascript events:⁡
+        Events are actions that occur on your webpage such as mouse-clicks or keypresses, and using 
+        JavaScript we can make our webpage listen and react to these events.
+
+        There are three primary ways to go about this: You can specify function attributes directly 
+        on your HTML elements, you can set properties of form on[eventType] (onclick, onmousedown, 
+        etc.) on the DOM nodes in your JavaScript, or you can attach event listeners to the DOM nodes 
+        in your JavaScript. Event listeners are definitely the preferred method, but you will 
+        regularly see the others in use, so we’re going to cover all three.
+
+        ⁡⁢⁣⁣Method 1:⁡
+           <button onclick="alert('Hello World')">Click Me</button> 
+
+           This solution is less than ideal because we’re cluttering our HTML with JavaScript. 
+           Also, we can only set one “onclick” property per DOM element, so we’re unable to run 
+           multiple separate functions in response to a click event using this method.
+
+        ⁡⁢⁣⁣Method 2:⁡
+           <!-- the HTML file -->
+           <button id="btn">Click Me</button>
+
+           // the JavaScript file
+           const btn = document.querySelector('#btn');
+           btn.onclick = () => alert("Hello World");
+
+           This is a little better. We’ve moved the JS out of the HTML and into a JS file, 
+           but we still have the problem that a DOM element can only have 1 “onclick” property.
+
+        ⁡⁢⁣⁣Method 3:⁡
+           <!-- the HTML file -->
+           <button id="btn">Click Me Too</button>
+
+           // the JavaScript file
+           const btn = document.querySelector('#btn');
+           btn.addEventListener('click', () => {
+           alert("Hello World");
+           });
+
+           Now, we maintain separation of concerns, and we also allow multiple event listeners if 
+           the need arises. Method 3 is much more flexible and powerful, though it is a bit more 
+           complex to set up.
+
+       ⁡⁢⁣⁣ Note that all three of these methods can be used with named functions like so:⁡
+            <!-- the HTML file -->
+            <!-- METHOD 1 -->
+            <button onclick="alertFunction()">CLICK ME BABY</button>
+
+            // the JavaScript file
+            function alertFunction() {
+            alert("YAY! YOU DID IT!");
+            }
+
+            // METHOD 2
+            btn.onclick = alertFunction;
+
+            // METHOD 3
+            btn.addEventListener('click', alertFunction);
+
+        https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener -- this has
+        decent information about events and handling them. 
+        
+        For more practical uses, see js-test.js in "change-css-with-js-exercise"
+
+    ⁡⁢⁣⁣Attaching listeners to groups of nodes:⁡
+        This might seem like a lot of code if you’re attaching lots of similar event 
+        listeners to many elements. There are a few ways to go about doing that more efficiently. 
+        We learned above that we can get a nodelist of all of the items matching a specific selector 
+        with querySelectorAll('selector'). In order to add a listener to each of them we simply 
+        need to iterate through the whole list like so:
+
+        <!-- In HTML -->
+        <div id="container">
+            <button id="1">Click Me</button>
+            <button id="2">Click Me</button>
+            <button id="3">Click Me</button>
+        </div>
+
+        // buttons is a node list. It looks and acts much like an array.
+        const buttons = document.querySelectorAll('button');
+
+        // we use the .forEach method to iterate through each button
+        buttons.forEach((button) => {
+
+        // and for each one we add a 'click' listener
+        button.addEventListener('click', () => {
+            alert(button.id);
+        });
+        });
+
+    https://www.w3schools.com/jsref/dom_obj_event.asp -- comprehensive list of DOM events
+
+
 
