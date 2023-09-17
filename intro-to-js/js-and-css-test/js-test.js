@@ -95,7 +95,8 @@ buttons.forEach((button) => {
     });
 });
 
-button.addEventListener("click", () => {
-    console.log(button.id);
-})
+buttons.addEventListener("click", () => {
+    console.log(buttons.id);
+});
+
 
