@@ -9,3 +9,4 @@
 	url = https://github.com/adacott/odin-rock-paper-scissors
 [submodule "odin-etch-a-sketch"]
 	path = odin-etch-a-sketch
+	url = https://github.com/adacott/odin-etch-a-sketch
