@@ -77,7 +77,7 @@ You are able to do basic math inside a min() => for example: width(8ch, 100vw - 
 
 /* Code for the clamp() example: */
 h1 {
-    font-size: clamp(64px, 80px, 120px);
+    font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
 /* Clamp takes 3 value -- the smallest value, the ideal value, and the largest value.
