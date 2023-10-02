@@ -13,6 +13,3 @@
 [submodule "odin-calculator"]
 	path = odin-calculator
 	url = https://github.com/adacott/odin-calculator
-[submodule "odin-sign-up-form/odin-sign-up-form"]
-	path = odin-sign-up-form/odin-sign-up-form
-	url = https://github.com/adacott/odin-sign-up-form.git
