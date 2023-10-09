@@ -17,3 +17,6 @@
 [submodule "odin-sign-up-form"]
 	path = odin-sign-up-form
 	url = https://github.com/adacott/odin-sign-up-form
+[submodule "odin-admin-dashboard"]
+	path = odin-admin-dashboard
+	url = https://github.com/adacott/odin-admin-dashboard
