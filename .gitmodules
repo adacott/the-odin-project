@@ -20,3 +20,6 @@
 [submodule "odin-admin-dashboard"]
 	path = odin-admin-dashboard
 	url = https://github.com/adacott/odin-admin-dashboard
+[submodule "odin-library"]
+	path = odin-library
+	url = https://github.com/adacott/odin-library
