@@ -13,7 +13,6 @@
 [submodule "odin-calculator"]
 	path = odin-calculator
 	url = https://github.com/adacott/odin-calculator
-
 [submodule "odin-sign-up-form"]
 	path = odin-sign-up-form
 	url = https://github.com/adacott/odin-sign-up-form
@@ -23,3 +22,6 @@
 [submodule "odin-library"]
 	path = odin-library
 	url = https://github.com/adacott/odin-library
+[submodule "odin-tic-tac-toe"]
+	path = odin-tic-tac-toe
+	url = https://github.com/adacott/odin-tic-tac-toe
